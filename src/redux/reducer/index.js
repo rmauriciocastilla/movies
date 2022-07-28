@@ -1,19 +1,32 @@
-import { GET_MOVIES,GET_MOVIE_DETAIL, ADD_MOVIE_FAVORITE, REMOVE_MOVIE_FOVOURITE } from "../actions";
+import { GET_MOVIES,GET_MOVIE_DETAIL, ADD_MOVIE_FAVORITE, REMOVE_MOVIE_FAVORITE } from "../actions";
 
 const initialState = {
-    moviesFavourites: [],
+    moviesFavorites: [],
     response: {},
-    movieDetail: {}
+    movieDetail: {},
+    search: "",
+    page: 1
   };
 
 export default function rootReducer (state = initialState, action){
     switch(action.type){
 
         case GET_MOVIES:
-            return {
-                ...state,
-                response: action.payload
-              };
+            if(action.payload.search===state.search){
+                return {
+                    ...state,
+                    response: action.payload.data,
+                    page: action.payload.page
+                  };
+            }
+            else{
+                return {
+                    ...state,
+                    response: action.payload.data,
+                    search: action.payload.search,
+                    page: 1
+                  };
+            }
 
         case GET_MOVIE_DETAIL:
             return{
@@ -22,19 +35,19 @@ export default function rootReducer (state = initialState, action){
             }
 
         case ADD_MOVIE_FAVORITE:
-            if(state.moviesFavourites.find(movie => movie.id == action.id) == undefined){
+            if(!state.moviesFavorites.find(movie => movie.imdbID == action.payload.imdbID)){
                 return{
                     ...state,
-                    moviesFavourites: state.moviesFavourites.concat({title: action.payloadTitle, id: action.id})
+                    moviesFavorites: state.moviesFavorites.concat(action.payload)
                 }
             }
             return {...state}
             
 
-        case REMOVE_MOVIE_FOVOURITE:
+        case REMOVE_MOVIE_FAVORITE:
             return{
                 ...state,
-                moviesFavourites: state.moviesFavourites.filter(movie => movie.id!== action.id)
+                moviesFavorites: state.moviesFavorites.filter(movie => movie.imdbID!== action.payload.imdbID)
             }
 
         default:

@@ -9,8 +9,8 @@ export default function App() {
   return (
     <div>
         <NavBar/>
-        <Route path="/home" component={Search}/>
-        <Route path="/home" component={Movies}/>
+        <Route exact path="/" component={Search}/>
+        <Route exact path="/" component={Movies}/>
         <Route path="/favorites" component={FavoriteMovies}/>
         <Route path="/detail/:id" component={MovieDetail}/>
     </div>
