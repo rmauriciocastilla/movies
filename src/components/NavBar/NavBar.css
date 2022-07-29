@@ -1,0 +1,64 @@
+.nav-container{
+    background-color: black;
+    font-size: 3.5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    padding: 0.2vw 0px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link-title{
+    color: red;
+    font-size: 4vw;
+}
+
+.nav-link-title:hover{
+    color: yellow;
+}
+
+.nav-link-title{
+    transition: color 0.25s linear 0s;
+}
+
+.nav-link-fav{
+    color: white
+}
+
+.nav-link-fav:hover{
+    color: rgb(255, 154, 171);
+}
+
+.nav-link-fav{
+    transition: color 0.25s linear 0s;
+}
+
+.nav-link-linkedin{
+    color: white;
+}
+
+.nav-link-linkedin:hover{
+    color: rgb(24, 62, 255);
+}
+
+.nav-link-linkedin{
+    transition: color 0.25s linear 0s;
+}
+
+.nav-link-github{
+    color: white;
+}
+
+.nav-link-github:hover{
+    color: rgb(148, 82, 255);
+}
+
+.nav-link-github{
+    transition: color 0.25s linear 0s;
+}

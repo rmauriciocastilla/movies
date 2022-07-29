@@ -8,7 +8,7 @@ export default function FavoriteMovies(){
     let moviesFavorites = useSelector(state=>state.moviesFavorites);
 
     return(
-        <div>{!moviesFavorites.length?"No tengo":moviesFavorites.map(movie=>(
+        <div className="container-movies">{!moviesFavorites.length?"No tengo":moviesFavorites.map(movie=>(
             <Movie
             Title={movie.Title}
             imdbID={movie.imdbID}

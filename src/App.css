@@ -1,5 +1,11 @@
 *{
   padding: 0px;
   margin: 0px;
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  /* color: white; */
+}
+
+body{
+  background-color: black;
+  scroll-behavior: smooth;
 }

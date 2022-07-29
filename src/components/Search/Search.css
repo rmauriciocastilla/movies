@@ -1,0 +1,23 @@
+form{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh auto;
+    width: 50vw;
+    height: 6vh;
+    border-radius: 2vw;
+    border: 2px solid white;
+}
+
+form input{
+    background-color: black;
+    margin-left: 10px;
+    width: 90%;
+    padding-bottom: 4px;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    color: white;
+}

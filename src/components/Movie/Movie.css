@@ -1,0 +1,75 @@
+.container {
+  width: 35vw;
+  height: 60vh;
+  margin: 2vw 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 35px;
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+
+.movie-container:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+.movie-container{
+    transition: box-shadow 0.2s linear 0s;
+}
+
+.image-container {
+  width: 25vw;
+  height: 50vh;
+}
+
+.image-container img {
+  border-radius: 30px 30px 0px 0px;
+  width: 25vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.movie-commands {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-commands-button {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  margin: 0px 5px;
+}
+
+.movie-commands-button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.movie-commands-button {
+  transition: color 0.25s linear 0s;
+}
+
+.movie-commands-link {
+  text-decoration: none;
+  color: white;
+  margin: 0px 5px;
+  font-size: 2em;
+}
+
+.movie-commands-link:hover{
+    color: #1717ff;
+}
+
+.movie-commands-link {
+    transition: color 0.25s linear 0s;
+}

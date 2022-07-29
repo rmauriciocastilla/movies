@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getMovies } from "../../redux/actions";
+import './Search.css';
 
 export default function Search() {
   const dispatch = useDispatch();
@@ -20,13 +21,13 @@ export default function Search() {
   }
   return (
     <form onSubmit={handleSubmit}>
+      <i class="fa-solid fa-magnifying-glass"></i>
       <input
         type="text"
         value={search}
         placeholder="What are you looking for?"
         onChange={handleChange}
       />
-      <input type="submit" value="Search Movies" />
     </form>
   );
 }

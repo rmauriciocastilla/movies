@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Movie from "../Movie/Movie";
 import Pagination from "../Pagination/Pagination";
+import './Movies.css';
 
 export default function Movies() {
   let response = useSelector((state) => state.response);
@@ -16,12 +17,12 @@ export default function Movies() {
   if (!response.Response) {
     return <div></div>;
   } else if (response.Response === "False") {
-    return <div>{response.Error}</div>;
+    return <div>{response.Error} Try Again</div>;
   } else {
     return (
       <div>
         <Pagination max={max} />
-        <div>
+        <div className="container-movies">
           {response.Search.map((movie) => (
             <Movie
               key={movie.imdbID}
@@ -31,6 +32,7 @@ export default function Movies() {
             />
           ))}
         </div>
+        <Pagination max={max} />
       </div>
     );
   }
